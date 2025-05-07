@@ -1,0 +1,27 @@
+https://fastapidozero.dunossauro.com/estavel/
+
+pipx: pipx cria um ambiente virtual e isola cada ferramenta dentro dele, facilitando a instalação de pacotes globais.
+pipx ensurepath: Garante que o PATH esteja devidamente ajustado!
+Poetry é um gerenciador de projetos para Python. (Recomendado para instalar com pipx)
+poetry self add poetry-plugin-shell: Habilita os comando do poetry shell que habilita o ambiente virtual no terminal.
+Uvicorn: Ele atua como esse servidor, disponibilizando a API do FastAPI em rede. Isso permite que a API seja acessada de outros dispositivos ou programas.
+FastAPI:
+- Uma coisa bastante interessante sobre o FastAPI é que ele é um framework web baseado em funções.
+- poetry shell: habilita o ambiente virtual
+- fastapi dev fast_zero/app.py : inicia a aplicacao
+- protocolo:endereco:porta
+
+Taskipy: ferramenta usada para criação de comandos. Como executar a aplicação, rodar os testes, etc. (similar ao makefile)
+Pytest: ferramenta para escrever e executar testes
+Ruff: Uma ferramenta que tem duas funções no nosso código (linter e formatador)
+poetry add --group dev pytest pytest-cov taskipy ruff
+
+linter:
+I (Isort): Checagem de ordenação de imports em ordem alfabética
+F (Pyflakes): Procura por alguns erros em relação a boas práticas de código
+E (Erros pycodestyle): Erros de estilo de código
+W (Avisos pycodestyle): Avisos de coisas não recomendadas no estilo de código
+PL (Pylint): Como o F, também procura por erros em relação a boas práticas de código
+PT (flake8-pytest): Checagem de boas práticas do Pytest
+
+task run
