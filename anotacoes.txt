@@ -1,5 +1,7 @@
 https://fastapidozero.dunossauro.com/estavel/
 
+pip: python install package
+pipx: python install package executavel
 pipx: pipx cria um ambiente virtual e isola cada ferramenta dentro dele, facilitando a instalação de pacotes globais.
 pipx ensurepath: Garante que o PATH esteja devidamente ajustado!
 Poetry é um gerenciador de projetos para Python. (Recomendado para instalar com pipx)
@@ -9,11 +11,12 @@ FastAPI:
 - Uma coisa bastante interessante sobre o FastAPI é que ele é um framework web baseado em funções.
 - poetry shell: habilita o ambiente virtual
 - fastapi dev fast_zero/app.py : inicia a aplicacao
-- protocolo:endereco:porta
+- Uvicorn e quem serve o fastapi (o fastapi somente fornece a aplicacao)
+- URL = protocolo://endereço:porta/caminho/recurso?query_string#fragmento
 
 Taskipy: ferramenta usada para criação de comandos. Como executar a aplicação, rodar os testes, etc. (similar ao makefile)
 Pytest: ferramenta para escrever e executar testes
-Ruff: Uma ferramenta que tem duas funções no nosso código (linter e formatador)
+Ruff: Nativo do python, Uma ferramenta que tem duas funções no nosso código (linter e formatador)
 poetry add --group dev pytest pytest-cov taskipy ruff
 
 linter:
@@ -24,4 +27,25 @@ W (Avisos pycodestyle): Avisos de coisas não recomendadas no estilo de código
 PL (Pylint): Como o F, também procura por erros em relação a boas práticas de código
 PT (flake8-pytest): Checagem de boas práticas do Pytest
 
+- o que quer dizer "Stmts"? Linhas de código
 task run
+
+web
+- URL = protocolo://endereço:porta/caminho/recurso?query_string#fragmento
+https://fastapidozero.dunossauro.com/estavel/02/
+HTTP, ou Hypertext Transfer Protocol (Protocolo de Transferência de Hipertexto)
+- procotolo = "Acordo de como vamos nos comunicar"
+- modelo de requisição-resposta
+- tanto requisições quanto respostas são referidas como mensagens
+- mensagem constituido de cabecalho, Corpo, Verbos
+- HTML reside em sua simplicidade e eficácia. Mais do que uma linguagem, é uma forma de organizar e apresentar informações na web.
+- JSON é um formato leve de troca de dados, fácil de ler e escrever para humanos, e simples de interpretar e gerar para máquinas.
+- o compartilhamento de JSON entre cliente e servidor, é crucial estabelecer um entendimento mútuo sobre a estrutura dos dados que serão trocados.
+- contrato e igual schemas
+
+- Uvicorn e ASGI
+loopback: aplicação rodando na propria maquina (cliente/servidor). Rodando local!
+Servindo na rede local (LAN): --host (expoe para a rede !)
+
+- API REST precisar trafegar HTML, JSON nao e REST
+- pydantic formaliza o contrato que sera enviado na resposta para o cliente
